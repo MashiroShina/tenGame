@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour
 
     public float spawnRate = 1f;
 
-    public GameObject hexagonPrefab;
+    public GameObject[] hexagonPrefab;
 
     private float nextTimeToSpawn=0f;
 	// Use this for initialization
@@ -20,8 +20,8 @@ public class Spawner : MonoBehaviour
 	{
 	    if (Time.time >= nextTimeToSpawn)
 	    {
-	        Instantiate(hexagonPrefab, Vector3.zero, Quaternion.identity);
-	        nextTimeToSpawn = Time.time + 1f / spawnRate;
+            Instantiate(hexagonPrefab[Random.Range(0, 1)], Vector3.zero, Quaternion.identity);
+            nextTimeToSpawn = Time.time + 1f / spawnRate;
 	    }
     }
 }

@@ -11,7 +11,7 @@ public class Hexagon : MonoBehaviour
 	void Start ()
 	{
 	    rb.rotation = Random.Range(0, 300f);
-	    transform.localScale = Vector3.one * 10f;
+        transform.localScale = Vector3.one*8f;
 	}
 	
 	// Update is called once per frame
